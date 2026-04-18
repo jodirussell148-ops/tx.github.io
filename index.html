@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>生日快乐</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+width:100vw;
+height:100vh;
+background:pink;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:微软雅黑,sans-serif;
+overflow:hidden;
+}
+
+#clickBtn{
+font-size:80px;
+font-weight:bold;
+color:blue;
+cursor:pointer;
+user-select:none;
+}
+
+#cakeBox{
+display:none;
+text-align:center;
+position:relative;
+}
+#cakeImg{
+width:400px;
+}
+#cakeText{
+font-size:36px;
+color:darkred;
+font-weight:bold;
+margin-bottom:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="clickBtn">请点击</div>
+
+<div id="cakeBox">
+<div id="cakeText">我的好朋友 生日快乐</div>
+<img id="cakeImg" src="https://picsum.photos/id/291/800/600" alt="生日蛋糕">
+</div>
+
+<audio id="song" src="https://music.163.com/song/media/outer/url?id=1414461021.mp3">
+
+<script>
+const btn = document.getElementById('clickBtn');
+const cake = document.getElementById('cakeBox');
+const audio = document.getElementById('song');
+
+btn.addEventListener('click', function(){
+alert('玉米生日快乐');
+btn.style.display = 'none';
+cake.style.display = 'block';
+audio.play().catch(err=>{});
+});
+</script>
+
+</body>
+</html>
